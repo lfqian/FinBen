@@ -412,14 +412,17 @@ def aggregate_results(dataset):
     return aggregated
 
 
-def update_greek_contents(aggregated_results, repo_id="TheFinAI/greek-contents"):
+def update_greek_contents(aggregated_results, repo_id="TheFinAI/greek_content"):
+    dataset = Dataset.from_list([value for value in aggregated_results.values()])
+    dataset.push_to_hub(repo_id)
+def update_longcontext_contents(aggregated_results, repo_id="TheFinAI/longcontext_content"):
     dataset = Dataset.from_list([value for value in aggregated_results.values()])
     dataset.push_to_hub(repo_id)
 
 
 # Example Usage
-repo_id = "TheFinAI/lm-eval-results-private"  # Update with actual repo ID
+repo_id = "TheFinAI/lm-eval-results-longcontext"  # Update with actual repo ID
 json_files_dataset = load_dataset_from_huggingface(repo_id)
 aggregated_results = aggregate_results(json_files_dataset)
 print(json.dumps(aggregated_results, indent=2))
-update_greek_contents(aggregated_results)
+update_longcontext_contents(aggregated_results)
