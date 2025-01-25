@@ -32,7 +32,7 @@ MODEL_NAME="meta-llama/Llama-3.1-8B-Instruct"
 
 
 MODEL="vllm" #CHANGE TO vllm
-MODEL_ARGS="pretrained=$MODEL_NAME,,tensor_parallel_size=1,gpu_memory_utilization=0.95,trust_remote_code=True,max_model_len=40000"  # CHANGE THE ARGS BASED ON VLLM, YOU NEED TO VERIFY IT 
+MODEL_ARGS="pretrained=$MODEL_NAME,tensor_parallel_size=1,gpu_memory_utilization=0.95,trust_remote_code=True,max_model_len=40000"  # CHANGE THE ARGS BASED ON VLLM, YOU NEED TO VERIFY IT 
 #,tensor_parallel_size=1,gpu_memory_utilization=0.95,trust_remote_code=True,max_model_len=40000" # ARGS FOR VLLM
 #,trust_remote_code=True,parallelize=True,max_length=40000 # ARGS FOR HF
 
