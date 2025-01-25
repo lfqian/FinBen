@@ -12,6 +12,7 @@ export HF_TOKEN='YOUT_HF_TOKEN'
 export CUDA_LAUNCH_BLOCKING=1
 
 
+# FOR SOME MODELS, YOU NEED TO COMMENT LAST LINE IN THIS FILE (--apply_chat_template)
 MODEL_NAME="meta-llama/Llama-3.1-8B-Instruct"
 #"meta-llama/Llama-3.1-8B-Instruct"
 #"THUDM/glm-4-9b-chat-1m"
