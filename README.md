@@ -1,6 +1,5 @@
 This is for Multilingual
-    Japanese/Spanish
-
+    (Japanese/Spanish)
 and Longcontext
 
 Installation:
