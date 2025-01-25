@@ -11,6 +11,7 @@ export HF_HOME='YOUR_LOCAL_PATH_TO_SAVE_MODELS'
 export HF_TOKEN='YOUT_HF_TOKEN'
 export CUDA_LAUNCH_BLOCKING=1
 
+TASKS="ACL_Longcontext_8k" # CHANGE TASK BASED ON TASK NAMES IN YAML FILES ([ACL_Longcontext_8k, ACL_Longcontext_16k, ACL_Longcontext_32k])
 
 # FOR SOME MODELS, YOU NEED TO COMMENT LAST LINE IN THIS FILE (--apply_chat_template)
 MODEL_NAME="meta-llama/Llama-3.1-8B-Instruct"
@@ -29,13 +30,16 @@ MODEL_NAME="meta-llama/Llama-3.1-8B-Instruct"
 #Qwen/Qwen2-7B-Instruct
 
 
+
 MODEL="vllm" #CHANGE TO vllm/hf
 MODEL_ARGS="pretrained=$MODEL_NAME,,tensor_parallel_size=1,gpu_memory_utilization=0.95,trust_remote_code=True,max_model_len=40000"  # CHANGE THE ARGS BASED ON VLLM, YOU NEED TO VERIFY IT 
 #,tensor_parallel_size=1,gpu_memory_utilization=0.95,trust_remote_code=True,max_model_len=40000" # ARGS FOR VLLM
 #,trust_remote_code=True,parallelize=True,max_length=40000 # ARGS FOR HF
 
 
-TASKS="ACL_Longcontext_8k"
+
+
+
 NUM_FEWSHOT=0
 BATCH_SIZE=1
 OUTPUT_PATH="results"
