@@ -53,4 +53,4 @@ lm_eval \
   --hf_hub_log_args "$HF_HUB_LOG_ARGS" \
   --log_samples \
   --include_path "$INCLUDE_PATH" \
-  --apply_chat_template \
+  --apply_chat_template \ 
