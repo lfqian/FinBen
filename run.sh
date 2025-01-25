@@ -34,7 +34,7 @@ MODEL_ARGS="pretrained=$MODEL_NAME,,tensor_parallel_size=1,gpu_memory_utilizatio
 #,trust_remote_code=True,parallelize=True,max_length=40000 # ARGS FOR HF
 
 
-TASKS="Longcontext"
+TASKS="ACL_Longcontext_8k"
 NUM_FEWSHOT=0
 BATCH_SIZE=1
 OUTPUT_PATH="results"
