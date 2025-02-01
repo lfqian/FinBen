@@ -13,3 +13,4 @@
 *.sh
 *.sh
 .jupyter/
+run.sh
