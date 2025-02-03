@@ -1,22 +1,22 @@
 dataset_name: default
-dataset_path: TheFinAI/Regulation_XBRL_FinMath_test
+dataset_path: YBXL/DRUGEHRQA_BGE_with_table_test_test
 output_type: generate_until
 doc_to_target: '{{answer}}'
 doc_to_text: '{{query}}'
-fewshot_split: test
+fewshot_split: train
 should_decontaminate: true
 doc_to_decontamination_query: "{{query}}"
 generation_kwargs:
   do_sample: false
   temperature: 0.0
-  max_gen_toks: 1024
+  max_gen_toks: 128
 metric_list:
   - metric: exact_match
     aggregation: mean
     higher_is_better: true
 metadata:
   version: '1.0'
-task: xbrl_math
-tag: fin
+task: drugehrqa_bge_with_table
+tag: ehr1
 test_split: test
 training_split: test
