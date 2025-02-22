@@ -1,9 +1,9 @@
 dataset_name: default
-dataset_path: TheFinAI/ACL_LONGCONTEXT_test
+dataset_path: TheFinAI/ACL_LONGCONTEXT_32k_test
 output_type: generate_until
 doc_to_target: '{{answer}}'
 doc_to_text: '{{query}}'
-fewshot_split: test_32k
+fewshot_split: test
 should_decontaminate: true
 doc_to_decontamination_query: "{{query}}"
 generation_kwargs:
@@ -26,5 +26,6 @@ metric_list:
 metadata:
   version: '1.0'
 task: ACL_Longcontext_32kgen
-test_split: test_32k
-training_split: test_32k
+test_split: test
+training_split: test
+
