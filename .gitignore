@@ -14,3 +14,4 @@
 *.sh
 .jupyter/
 run.sh
+*.ipynb_checkpoints/
